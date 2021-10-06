@@ -1,8 +1,8 @@
 -- vim: acd
-require('base')
+require "base"
 
-require('mappings')
+require "mappings"
 
-require('plugins')
+require "setups"
 
-require('packages')
+require "packers"

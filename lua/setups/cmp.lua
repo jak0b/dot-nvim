@@ -1,6 +1,6 @@
-local cmp = require'cmp'
+local cmp = require "cmp"
 
-cmp.setup({
+cmp.setup {
   snippet = {
     expand = function(args)
       -- For `vsnip` user.
@@ -14,17 +14,17 @@ cmp.setup({
     end,
   },
   mapping = {
-    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
-    ['<C-f>'] = cmp.mapping.scroll_docs(4),
-    ['<C-Space>'] = cmp.mapping.complete(),
-    ['<C-e>'] = cmp.mapping.close(),
-    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    ["<C-d>"] = cmp.mapping.scroll_docs(-4),
+    ["<C-f>"] = cmp.mapping.scroll_docs(4),
+    ["<C-Space>"] = cmp.mapping.complete(),
+    ["<C-e>"] = cmp.mapping.close(),
+    ["<CR>"] = cmp.mapping.confirm { select = true },
   },
   sources = {
-    { name = 'nvim_lsp' },
+    { name = "nvim_lsp" },
 
     -- For vsnip user.
-    { name = 'vsnip' },
+    { name = "vsnip" },
 
     -- For luasnip user.
     -- { name = 'luasnip' },
@@ -32,6 +32,6 @@ cmp.setup({
     -- For ultisnips user.
     -- { name = 'ultisnips' },
 
-    { name = 'buffer' },
-  }
-})
+    { name = "buffer" },
+  },
+}
