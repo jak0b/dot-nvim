@@ -109,7 +109,7 @@ ins_left {
       t = colors.red,
     }
     vim.api.nvim_command("hi! LualineMode guifg=" .. mode_color[vim.fn.mode()] .. " guibg=" .. colors.bg)
-    return ""
+    return "⬤"
   end,
   color = "LualineMode",
   left_padding = 0,
@@ -170,7 +170,7 @@ ins_left {
 ins_left {
   -- Lsp server name .
   function()
-    local msg = "No Active Lsp"
+    local msg = "·"
     local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
     local clients = vim.lsp.get_active_clients()
     if next(clients) == nil then

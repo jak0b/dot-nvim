@@ -1,6 +1,7 @@
 local g = vim.g
+local cmd = vim.cmd
 
-dmap = function(mode, lhs, rhs)
+local dmap = function(mode, lhs, rhs)
   local opts = { noremap = true, silent = true }
   vim.api.nvim_set_keymap(mode, lhs, rhs, opts)
 end
@@ -12,15 +13,35 @@ dmap("n", "<leader>cd", ":cd %:p:h<CR>")
 
 dmap("n", "<leader>q", ":quitall<CR>")
 
-dmap("n", "<leader>t", ":Telescope<CR>")
+-- Telescope
+
+
+-- Quick mappings
 dmap("n", "<leader><space>", ":Telescope buffers<CR>")
-dmap("n", "<leader>f", ":Telescope find_files previewer=false<CR>")
-dmap("n", "<leader>h", ":Telescope help_tags<CR>")
-dmap("n", "<leader>m", ":Telescope keymaps<CR>")
-dmap("n", "<leader>g", ":Telescope grep_string<CR>")
-dmap("n", "<leader>G", ":Telescope live_grep<CR>")
-dmap("n", "<leader>l", ":Telescope oldfiles<CR>")
-dmap("n", "<leader>k", ":Telescope lsp_definition<CR>")
+dmap("n", "<leader>f", ":Telescope find_files<CR>")
+dmap("n", "<leader>g", ":Telescope live_grep<CR>")
+dmap("n", "<leader>G", ":Telescope grep_string<CR>")
+
+-- Basic buildins
+dmap("n", "<leader>tt", ":Telescope<CR>")
+dmap("n", "<leader>to", ":Telescope oldfiles<CR>")
+dmap("n", "<leader>tf", ":Telescope file_browser<CR>")
+dmap("n", "<leader>tkm", ":Telescope keymaps<CR>")
+dmap("n", "<leader>tht", ":Telescope help_tags<CR>")
+dmap("n", "<leader>tr", ":Telescope registers<CR>")
+
+dmap("n", "<leader>tlr", ":Telescope lsp_references<CR>")
+dmap("n", "<leader>tld", ":Telescope lsp_definition<CR>")
+dmap("n", "<leader>tli", ":Telescope lsp_implementations<CR>")
+dmap("n", "<leader>tlD", ":Telescope lsp_type_definitions<CR>")
+
+dmap("n", "<leader>tgc", ":Telescope git_commits<CR>")
+dmap("n", "<leader>tgC", ":Telescope git_bcommits<CR>")
+dmap("n", "<leader>tgb", ":Telescope git_branches<CR>")
+dmap("n", "<leader>tgs", ":Telescope git_status<CR>")
+dmap("n", "<leader>tgS", ":Telescope git_stash<CR>")
+
+dmap("n", "<leader>tgS", ":Telescope git_stash<CR>")
 
 -- tree
 dmap("", "<C-n>", ":NvimTreeToggle<CR>")
@@ -50,3 +71,30 @@ dmap("n", "gh", ":lua require'lspsaga.provider'.lsp_finder()<CR>") -- toggle DAP
 
 -- Terminal exti
 dmap("t", "<Esc>", "<C-\\><C-n>")
+
+
+dmap("n", "<leader>b", ":bnext<CR>")
+dmap("n", "<leader>B", ":bprevious<CR>")
+
+dmap("n", "<C-J>", "<C-W><C-J>")
+dmap("n", "<C-K>", "<C-W><C-K>")
+dmap("n", "<C-L>", "<C-W><C-L>")
+dmap("n", "<C-H>", "<C-W><C-H>")
+
+
+-- Rust
+cmd [[
+autocmd FileType rust nnoremap <buffer><leader>au :wall<CR> :!cargo update<CR>
+
+autocmd FileType rust nnoremap <buffer><leader>ab :wall<CR> :!cargo build<CR>
+autocmd FileType rust nnoremap <buffer><leader>aB :wall<CR> :!cargo build --release<CR>
+
+autocmd FileType rust nnoremap <buffer><leader>ar :wall<CR> :!cargo run<CR>
+autocmd FileType rust nnoremap <buffer><leader>aR :wall<CR> :!cargo run --release<CR>
+
+autocmd FileType rust nnoremap <buffer><leader>at :wall<CR> :!cargo test<CR>
+autocmd FileType rust nnoremap <buffer><leader>aT :wall<CR> :!cargo test --release<CR>
+
+autocmd FileType rust nnoremap <buffer><leader>ac :wall<CR> :!cargo clean<CR>
+autocmd FileType rust nnoremap <buffer><leader>aC :wall<CR> :!cargo test --release<CR>
+]]

@@ -55,7 +55,7 @@ opt.termguicolors = true
 cmd [[au BufEnter * set fo-=c fo-=r fo-=o]]
 
 -- Spell checking
-opt.spelllang = "en_gb,pl"
+opt.spelllang = "en_gb,de,pl"
 -- set the theme
 cmd [[colorscheme blue-moon]]
 
@@ -63,3 +63,9 @@ cmd [[colorscheme blue-moon]]
 cmd [[
 au TermOpen * setlocal nonumber
 ]]
+
+
+opt.showbreak = "↪>\\"
+
+
+opt.listchars="tab:»·,nbsp:+,trail:·,extends:→,precedes:←"

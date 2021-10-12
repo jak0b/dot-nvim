@@ -1,5 +1,4 @@
 local gitsigns = require "gitsigns"
-local vgit = require "vgit"
 
 gitsigns.setup {
   signs = {
@@ -65,5 +64,3 @@ gitsigns.setup {
     enable = false,
   },
 }
-
-vgit.setup()
