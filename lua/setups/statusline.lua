@@ -1,19 +1,20 @@
 local lualine = require "lualine"
 
--- Color table for highlights
-local colors = {
-  bg = "#292d3e",
-  fg = "#fbfbfb",
-  yellow = "#cfcfbf",
-  cyan = "#89ddff",
-  darkblue = "#959dcb",
-  green = "#b4c4b4",
-  orange = "#b4b4b4",
-  violet = "#b9a3eb",
-  magenta = "#444267",
-  blue = "#b8bcf3",
-  red = "#d06178",
+local ayu_dark = {
+  bg = "#0F131A",
+  fg = "#6C7380",
+  yellow = "#E6B450",
+  cyan = "#39BAE6",
+  darkblue = "#409FFF",
+  green = "#7FD962",
+  orange = "#D95757",
+  violet = "#6C5980",
+  magenta = "#D2A6FF",
+  blue = "#73B8FF",
+  red = "#F07178",
 }
+
+local colors = ayu_dark
 
 local conditions = {
   buffer_not_empty = function()

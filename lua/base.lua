@@ -12,7 +12,7 @@ opt.ignorecase = true -- ignore case letters when search
 opt.smartcase = true -- ignore lowercase for the whole pattern
 
 ---
-opt.virtualedit = "all" -- enable virtual edit for moving the cursor freely across the sreeen
+-- opt.virtualedit = "all" -- enable virtual edit for moving the cursor freely across the sreeen
 
 -- allow to move the current window
 -- to a different buffer without saving
@@ -57,7 +57,8 @@ cmd [[au BufEnter * set fo-=c fo-=r fo-=o]]
 -- Spell checking
 opt.spelllang = "en_gb,de,pl"
 -- set the theme
-cmd [[colorscheme blue-moon]]
+-- cmd [[colorscheme blue-moon]]
+cmd [[colorscheme ayu-dark]]
 
 -- Disable number in the termianl window
 cmd [[

@@ -3,7 +3,7 @@ local bufferline = require "bufferline"
 bufferline.setup {
   highlights = {
     fill = {
-      guibg = "#121622",
+      guibg = "#0F131A",
     },
   },
   options = {

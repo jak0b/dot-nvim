@@ -11,9 +11,6 @@ augroup end
 cmd [[packadd packer.nvim]]
 
 packer.startup(function()
-  -- base16 color scheme
-  use { "RRethy/nvim-base16" }
-
   -- Auto RBGA colorizer
   use { "norcalli/nvim-colorizer.lua" }
 
@@ -57,6 +54,9 @@ packer.startup(function()
 
   -- content tree
   use "kyazdani42/nvim-tree.lua"
+
+  -- Ayu theme
+  use "Shatur/neovim-ayu"
 
   use {
     "lewis6991/gitsigns.nvim",

@@ -44,3 +44,5 @@ require "setups/cmp"
 
 -- `ojroques/nvim-bufdel`
 require "setups/bufdel"
+
+require "setups/colorscheme"
