@@ -1,4 +1,19 @@
-require("nvim-treesitter.configs").setup {
+treesitter_configs = require "nvim-treesitter.configs"
+treesitter_parsers = require "nvim-treesitter.parsers"
+
+parser_config = treesitter_parsers.get_parser_configs()
+
+parser_config.gotmpl = {
+  install_info = {
+    url = "https://github.com/ngalaiko/tree-sitter-go-template",
+    files = {"src/parser.c"}
+  },
+  filetype = "gotmpl",
+  used_by = {"gohtmltmpl", "gotexttmpl", "gotmpl", "yaml"}
+}
+
+
+treesitter_configs.setup {
   ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   ignore_install = { "javascript" }, -- List of parsers to ignore installing
   highlight = {

@@ -56,7 +56,7 @@ dmap("n", "<leader>do", ":lua require'dap'.step_out()<CR>")
 dmap("n", "<leader>db", ":lua require'dap'.toggle_breakpoint()<CR>")
 dmap("n", "<leader>dB", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>")
 dmap("n", "<leader>dlp", ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>")
-dmap("n", "<leader>dr", ":lua require'dap'.repl.open()<CR>")
+dmap("n", "<leader>dr", ":lua require'dap'.repl.toggle()<CR>")
 dmap("n", "<leader>da", ":Telescope dap configurations<CR>")
 
 dmap("n", "<leader>dl", ":lua require'dap'.run_last()<CR>")
