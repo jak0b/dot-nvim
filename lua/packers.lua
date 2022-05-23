@@ -44,7 +44,7 @@ packer.startup(function()
   use "jbyuki/venn.nvim"
 
   -- bufferline
-  use {'akinsho/bufferline.nvim', tag = "*", requires = 'kyazdani42/nvim-web-devicons'}
+  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
 
   -- status line
   use "hoob3rt/lualine.nvim"
@@ -54,6 +54,8 @@ packer.startup(function()
 
   -- content tree
   use "kyazdani42/nvim-tree.lua"
+
+  use "taybart/b64.nvim"
 
   -- Ayu theme
   use "Shatur/neovim-ayu"
