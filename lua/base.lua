@@ -11,6 +11,8 @@ opt.splitbelow = true -- horizontal split to the bottom
 opt.ignorecase = true -- ignore case letters when search
 opt.smartcase = true -- ignore lowercase for the whole pattern
 
+opt.laststatus = 3 -- use the global statusbar
+
 ---
 -- opt.virtualedit = "all" -- enable virtual edit for moving the cursor freely across the sreeen
 
