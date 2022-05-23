@@ -14,7 +14,7 @@ packer.startup(function()
   -- Auto RBGA colorizer
   use { "norcalli/nvim-colorizer.lua" }
 
-  use { "blackCauldron7/surround.nvim" }
+  use { "ur4ltz/surround.nvim" }
 
   use {
     "nvim-telescope/telescope.nvim",
@@ -44,7 +44,7 @@ packer.startup(function()
   use "jbyuki/venn.nvim"
 
   -- bufferline
-  use { "akinsho/bufferline.nvim", requires = "kyazdani42/nvim-web-devicons" }
+  use {'akinsho/bufferline.nvim', tag = "*", requires = 'kyazdani42/nvim-web-devicons'}
 
   -- status line
   use "hoob3rt/lualine.nvim"

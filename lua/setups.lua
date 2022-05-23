@@ -28,7 +28,7 @@ require "setups/tree"
 -- `akinsho/bufferline.nvim`
 require "setups/bufferline"
 
--- `blackCauldron7/surround.nvim`
+-- `ur4ltz/surround.nvim`
 require "setups/surround"
 
 -- `jbyuki/venn.nvim`
