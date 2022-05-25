@@ -48,7 +48,7 @@ local function mode()
   end
 end
 
-require("lualine").setup {
+lualine.setup {
   options = {
     icons_enabled = true,
     theme = "ayu",
