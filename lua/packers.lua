@@ -18,18 +18,24 @@ packer.startup(function()
 
   use {
     "nvim-telescope/telescope.nvim",
-    requires = {
-      { "nvim-lua/plenary.nvim" },
-      { "nvim-telescope/telescope-dap.nvim" },
-    },
+    requires = { { "nvim-lua/plenary.nvim" } },
   }
+
+  use { "nvim-telescope/telescope-dap.nvim" }
 
   -- Neovim tree sitter
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
 
   use "neovim/nvim-lspconfig" -- Collection of configurations for built-in LSP client
-  use "hrsh7th/nvim-cmp" -- Autocompletion plugin
-  use "hrsh7th/cmp-nvim-lsp" -- LSP source for nvim-cmp
+
+  use {
+    "hrsh7th/nvim-cmp",
+    requires = { {
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-path",
+    } },
+  } -- Autocompletion plugin
+
   use "saadparwaiz1/cmp_luasnip" -- Snippets source for nvim-cmp
   use "L3MON4D3/LuaSnip" -- Snippets plugin
 
@@ -38,13 +44,11 @@ packer.startup(function()
   use "rcarriga/nvim-dap-ui"
   use "mfussenegger/nvim-dap-python"
 
-  use "kyazdani42/blue-moon"
-
   -- Venn ASCII diagrams
   use "jbyuki/venn.nvim"
 
   -- bufferline
-  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+  use { "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" }
 
   -- status line
   use "hoob3rt/lualine.nvim"

@@ -1,7 +1,4 @@
-treesitter_configs = require "nvim-treesitter.configs"
-treesitter_parsers = require "nvim-treesitter.parsers"
-
-parser_config = treesitter_parsers.get_parser_configs()
+local treesitter_configs = require "nvim-treesitter.configs"
 
 treesitter_configs.setup {
   ensure_installed = "all",

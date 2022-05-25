@@ -7,7 +7,7 @@ bufferline.setup {
     },
   },
   options = {
-    numbers = function(opts)
+    numbers = function(_)
       return ""
     end,
     close_command = "bdelete! %d",

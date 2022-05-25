@@ -1,6 +1,6 @@
-ayu = require('ayu')
+ayu = require "ayu"
 
-ayu.setup({
-    mirage = false, -- Set to `true` to use `mirage` variant instead of `dark` for dark background.
-    overrides = {}, -- A dictionary with a group names associated with a dictionary with parameters (`bg`, `fg`, `sp` and `style`) and colors in hex.
-})
+ayu.setup {
+  mirage = false, -- Set to `true` to use `mirage` variant instead of `dark` for dark background.
+  overrides = {}, -- A dictionary with a group names associated with a dictionary with parameters (`bg`, `fg`, `sp` and `style`) and colors in hex.
+}

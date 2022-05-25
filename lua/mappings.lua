@@ -1,86 +1,80 @@
 local g = vim.g
 local cmd = vim.cmd
-
-local dmap = function(mode, lhs, rhs)
-  local opts = { noremap = true, silent = true }
-  vim.api.nvim_set_keymap(mode, lhs, rhs, opts)
-end
+local set = vim.keymap.set
 
 g.mapleader = ";"
 
 -- map('n', '<leader><space>', ':set hlsearch!<CR>', map_args)
-dmap("n", "<leader>cd", ":cd %:p:h<CR>")
+set("n", "<leader>cd", ":cd %:p:h<CR>")
 
-dmap("n", "<leader>q", ":quitall<CR>")
+set("n", "<leader>q", ":quitall<CR>")
 
 -- Telescope
 
-
 -- Quick mappings
-dmap("n", "<leader><space>", ":Telescope buffers<CR>")
-dmap("n", "<leader>f", ":Telescope find_files<CR>")
-dmap("n", "<leader>g", ":Telescope live_grep<CR>")
-dmap("n", "<leader>G", ":Telescope grep_string<CR>")
+set("n", "<leader><space>", ":Telescope buffers<CR>")
+-- set("n", "<leader><space>", ":Telescope buffers<CR>")
+set("n", "<leader>f", ":Telescope find_files<CR>")
+set("n", "<leader>g", ":Telescope live_grep<CR>")
+set("n", "<leader>G", ":Telescope grep_string<CR>")
 
 -- Basic buildins
-dmap("n", "<leader>tt", ":Telescope<CR>")
-dmap("n", "<leader>to", ":Telescope oldfiles<CR>")
-dmap("n", "<leader>tf", ":Telescope file_browser<CR>")
-dmap("n", "<leader>tkm", ":Telescope keymaps<CR>")
-dmap("n", "<leader>tht", ":Telescope help_tags<CR>")
-dmap("n", "<leader>tr", ":Telescope registers<CR>")
+set("n", "<leader>t", ":Telescope<CR>")
+set("n", "<leader>to", ":Telescope oldfiles<CR>")
+set("n", "<leader>tf", ":Telescope file_browser<CR>")
+set("n", "<leader>tkm", ":Telescope keymaps<CR>")
+set("n", "<leader>tht", ":Telescope help_tags<CR>")
+set("n", "<leader>tr", ":Telescope registers<CR>")
 
-dmap("n", "<leader>tlr", ":Telescope lsp_references<CR>")
-dmap("n", "<leader>tld", ":Telescope lsp_definition<CR>")
-dmap("n", "<leader>tli", ":Telescope lsp_implementations<CR>")
-dmap("n", "<leader>tlD", ":Telescope lsp_type_definitions<CR>")
+set("n", "<leader>tlr", ":Telescope lsp_references<CR>")
+set("n", "<leader>tld", ":Telescope lsp_definition<CR>")
+set("n", "<leader>tli", ":Telescope lsp_implementations<CR>")
+set("n", "<leader>tlD", ":Telescope lsp_type_definitions<CR>")
 
-dmap("n", "<leader>tgc", ":Telescope git_commits<CR>")
-dmap("n", "<leader>tgC", ":Telescope git_bcommits<CR>")
-dmap("n", "<leader>tgb", ":Telescope git_branches<CR>")
-dmap("n", "<leader>tgs", ":Telescope git_status<CR>")
-dmap("n", "<leader>tgS", ":Telescope git_stash<CR>")
+set("n", "<leader>tgc", ":Telescope git_commits<CR>")
+set("n", "<leader>tgC", ":Telescope git_bcommits<CR>")
+set("n", "<leader>tgb", ":Telescope git_branches<CR>")
+set("n", "<leader>tgs", ":Telescope git_status<CR>")
+set("n", "<leader>tgS", ":Telescope git_stash<CR>")
 
-dmap("n", "<leader>tgS", ":Telescope git_stash<CR>")
+set("n", "<leader>tgS", ":Telescope git_stash<CR>")
 
 -- tree
-dmap("", "<C-n>", ":NvimTreeToggle<CR>")
-dmap("", "<leader>r", ":NvimTreeRefresh<CR>")
-dmap("", "<leader>n", ":NvimTreeFindFile<CR>")
+set("", "<C-n>", ":NvimTreeToggle<CR>")
+set("", "<leader>r", ":NvimTreeRefresh<CR>")
+set("", "<leader>n", ":NvimTreeFindFile<CR>")
 
 -- dap
-dmap("n", "<leader>dc", ":lua require'dap'.continue()<CR>")
-dmap("n", "<leader>do", ":lua require'dap'.step_over()<CR>")
-dmap("n", "<leader>di", ":lua require'dap'.step_into()<CR>")
-dmap("n", "<leader>do", ":lua require'dap'.step_out()<CR>")
-dmap("n", "<leader>db", ":lua require'dap'.toggle_breakpoint()<CR>")
-dmap("n", "<leader>dB", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>")
-dmap("n", "<leader>dlp", ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>")
-dmap("n", "<leader>dr", ":lua require'dap'.repl.toggle()<CR>")
-dmap("n", "<leader>da", ":Telescope dap configurations<CR>")
+set("n", "<leader>dc", ":lua require'dap'.continue()<CR>")
+set("n", "<leader>do", ":lua require'dap'.step_over()<CR>")
+set("n", "<leader>di", ":lua require'dap'.step_into()<CR>")
+set("n", "<leader>do", ":lua require'dap'.step_out()<CR>")
+set("n", "<leader>db", ":lua require'dap'.toggle_breakpoint()<CR>")
+set("n", "<leader>dB", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>")
+set("n", "<leader>dlp", ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>")
+set("n", "<leader>dr", ":lua require'dap'.repl.toggle()<CR>")
+set("n", "<leader>da", ":Telescope dap configurations<CR>")
 
-dmap("n", "<leader>dl", ":lua require'dap'.run_last()<CR>")
-dmap("n", "<leader>du", ":lua require'dapui'.toggle()<CR>") -- toggle DAP nvim UI
+set("n", "<leader>dl", ":lua require'dap'.run_last()<CR>")
+set("n", "<leader>du", ":lua require'dapui'.toggle()<CR>") -- toggle DAP nvim UI
 
 --- Delete buffer
-dmap("", "<leader>x", ":BufDel<CR>")
-dmap("", "<leader>X", ":BufDel!<CR>")
+set("", "<leader>x", ":BufDel<CR>")
+set("", "<leader>X", ":BufDel!<CR>")
 
 -- LSP saga
-dmap("n", "gh", ":lua require'lspsaga.provider'.lsp_finder()<CR>") -- toggle DAP nvim UI
+set("n", "gh", ":lua require'lspsaga.provider'.lsp_finder()<CR>") -- toggle DAP nvim UI
 
 -- Terminal exti
-dmap("t", "<Esc>", "<C-\\><C-n>")
+set("t", "<Esc>", "<C-\\><C-n>")
 
+set("n", "<leader>b", ":bnext<CR>")
+set("n", "<leader>B", ":bprevious<CR>")
 
-dmap("n", "<leader>b", ":bnext<CR>")
-dmap("n", "<leader>B", ":bprevious<CR>")
-
-dmap("n", "<C-J>", "<C-W><C-J>")
-dmap("n", "<C-K>", "<C-W><C-K>")
-dmap("n", "<C-L>", "<C-W><C-L>")
-dmap("n", "<C-H>", "<C-W><C-H>")
-
+set("n", "<C-J>", "<C-W><C-J>")
+set("n", "<C-K>", "<C-W><C-K>")
+set("n", "<C-L>", "<C-W><C-L>")
+set("n", "<C-H>", "<C-W><C-H>")
 
 -- Rust
 cmd [[
