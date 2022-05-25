@@ -5,7 +5,7 @@ local set = vim.keymap.set
 g.mapleader = ";"
 
 -- map('n', '<leader><space>', ':set hlsearch!<CR>', map_args)
-set("n", "<leader>cd", ":cd %:p:h<CR>")
+-- set("n", "<leader>cd", ":cd %:p:h<CR>")
 
 set("n", "<leader>q", ":quitall<CR>")
 
@@ -13,14 +13,13 @@ set("n", "<leader>q", ":quitall<CR>")
 
 -- Quick mappings
 set("n", "<leader><space>", ":Telescope buffers<CR>")
--- set("n", "<leader><space>", ":Telescope buffers<CR>")
 set("n", "<leader>f", ":Telescope find_files<CR>")
 set("n", "<leader>g", ":Telescope live_grep<CR>")
 set("n", "<leader>G", ":Telescope grep_string<CR>")
 
 -- Basic buildins
-set("n", "<leader>t", ":Telescope<CR>")
-set("n", "<leader>to", ":Telescope oldfiles<CR>")
+set("n", "<leader>tt", ":Telescope<CR>")
+set("n", "<leader>o", ":Telescope oldfiles<CR>")
 set("n", "<leader>tf", ":Telescope file_browser<CR>")
 set("n", "<leader>tkm", ":Telescope keymaps<CR>")
 set("n", "<leader>tht", ":Telescope help_tags<CR>")
@@ -42,7 +41,7 @@ set("n", "<leader>tgS", ":Telescope git_stash<CR>")
 -- tree
 set("", "<C-n>", ":NvimTreeToggle<CR>")
 set("", "<leader>r", ":NvimTreeRefresh<CR>")
-set("", "<leader>n", ":NvimTreeFindFile<CR>")
+set("", "<leader>c", ":NvimTreeFindFile<CR>")
 
 -- dap
 set("n", "<leader>dc", ":lua require'dap'.continue()<CR>")
