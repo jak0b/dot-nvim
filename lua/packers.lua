@@ -51,7 +51,12 @@ packer.startup(function()
   use { "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" }
 
   -- status line
-  use "hoob3rt/lualine.nvim"
+  use {
+    "hoob3rt/lualine.nvim",
+    requires = { {
+      "kdheepak/tabline.nvim",
+    } },
+  }
 
   -- Ease buffer cleanup
   use "ojroques/nvim-bufdel"

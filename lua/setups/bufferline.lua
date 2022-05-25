@@ -14,7 +14,7 @@ bufferline.setup {
     right_mouse_command = "bdelete! %d",
     left_mouse_command = "buffer %d",
     middle_mouse_command = nil,
-    indicator_icon = "▎",
+    indicator_icon = "|",
     buffer_close_icon = "",
     modified_icon = "●",
     close_icon = "",
@@ -30,7 +30,7 @@ bufferline.setup {
     max_prefix_length = 15, -- prefix used when a buffer is de-duplicated
     tab_size = 18,
     always_show_bufferline = false,
-    diagnostics = false,
-    offsets = { { filetype = "NvimTree", text = "tree", highlight = "Directory" } },
+    diagnostics = "nvim_lsp",
+    offsets = { { filetype = "tree", text = "tree", highlight = "Directory" } },
   },
 }
