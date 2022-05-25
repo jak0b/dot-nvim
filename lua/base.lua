@@ -2,6 +2,8 @@ local opt = vim.opt
 local cmd = vim.cmd
 local g = vim.g
 
+local ayu = require "ayu"
+
 opt.number = true -- show line number
 opt.showmatch = true -- highlight matching parenthesis
 opt.foldmethod = "marker" -- enable folding (default 'foldmarker')
@@ -59,16 +61,19 @@ cmd [[au BufEnter * set fo-=c fo-=r fo-=o]]
 -- Spell checking
 opt.spelllang = "en_gb,de,pl"
 -- set the theme
--- cmd [[colorscheme blue-moon]]
 cmd [[colorscheme ayu-dark]]
+
+-- ayu.setup({
+--     dark = true, -- Set to `true` to use `mirage` variant instead of `dark` for dark background.
+--     overrides = {}, -- A dictionary of group names, each associated with a dictionary of parameters (`bg`, `fg`, `sp` and `style`) and colors in hex.
+-- })
+--
 
 -- Disable number in the termianl window
 cmd [[
 au TermOpen * setlocal nonumber
 ]]
 
-
 opt.showbreak = "↪>\\"
 
-
-opt.listchars="tab:»·,nbsp:+,trail:·,extends:→,precedes:←"
+opt.listchars = "tab:»·,nbsp:+,trail:·,extends:→,precedes:←"

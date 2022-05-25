@@ -16,10 +16,9 @@ telescope.setup {
   },
   pickers = {
     find_files = {
-      find_command = {"rg", "--files", "--hidden", "-g", "!node_modules/**", "-g", "!.git/**"} 
-    }
-  }
+      find_command = { "rg", "--files", "--hidden", "-g", "!node_modules/**", "-g", "!.git/**" },
+    },
+  },
 }
-
 
 telescope.load_extension "dap"
