@@ -1,6 +1,8 @@
 -- `nvim-telescope/telescope.nvim`
 require "setups/telescope"
 
+require "setups/colorscheme"
+
 -- `mfussenegger/nvim-dap`
 -- `mfussenegger/nvim-dap-python`
 -- `theHamsta/nvim-dap-virtual-text`
@@ -26,7 +28,7 @@ require "setups/treesitter"
 require "setups/tree"
 
 -- `akinsho/bufferline.nvim`
-require "setups/bufferline"
+-- require "setups/bufferline"
 
 -- `ur4ltz/surround.nvim`
 require "setups/surround"
@@ -44,5 +46,3 @@ require "setups/cmp"
 
 -- `ojroques/nvim-bufdel`
 require "setups/bufdel"
-
-require "setups/colorscheme"
