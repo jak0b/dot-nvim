@@ -21,6 +21,9 @@ require "setups/lsp"
 -- `lewis6991/gitsigns.nvim`
 require "setups/git"
 
+-- `lukas-reineke/indent-blankline.nvim`
+require "setups/indent"
+
 -- `nvim-treesitter/nvim-treesitter`
 require "setups/treesitter"
 
