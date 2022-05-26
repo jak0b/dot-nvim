@@ -1,6 +1,6 @@
-local bufdel = require "bufdel"
+local bufdel = require 'bufdel'
 
 bufdel.setup {
-  next = "cycle", -- or 'alternate'
+  next = 'cycle',
   quit = false,
 }

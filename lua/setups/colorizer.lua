@@ -1,8 +1,8 @@
-local colorizer = require "colorizer"
+local colorizer = require 'colorizer'
 colorizer.setup {
-  "css",
-  "javascript",
+  'css',
+  'javascript',
   html = {
-    mode = "foreground",
+    mode = 'foreground',
   },
 }
