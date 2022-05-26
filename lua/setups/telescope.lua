@@ -1,24 +1,24 @@
-local telescope = require "telescope"
-local actions = require "telescope.actions"
+local telescope = require 'telescope'
+local actions = require 'telescope.actions'
 
 telescope.setup {
   defaults = {
     mappings = {
       i = {
-        ["<esc>"] = actions.close,
+        ['<esc>'] = actions.close,
       },
     },
-    prompt_title = "",
-    results_title = "",
-    preview_title = "",
+    prompt_title = '',
+    results_title = '',
+    preview_title = '',
     winblend = 20,
-    borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+    borderchars = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
   },
   pickers = {
     find_files = {
-      find_command = { "rg", "--files", "--hidden", "-g", "!node_modules/**", "-g", "!.git/**" },
+      find_command = { 'rg', '--files', '--hidden', '-g', '!node_modules/**', '-g', '!.git/**' },
     },
   },
 }
 
-telescope.load_extension "dap"
+telescope.load_extension 'dap'

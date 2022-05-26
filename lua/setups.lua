@@ -1,51 +1,51 @@
 -- `nvim-telescope/telescope.nvim`
-require "setups/telescope"
+require 'setups/telescope'
 
-require "setups/colorscheme"
+require 'setups/colorscheme'
 
 -- `mfussenegger/nvim-dap`
 -- `mfussenegger/nvim-dap-python`
 -- `theHamsta/nvim-dap-virtual-text`
 -- `rcarriga/nvim-dap-ui`
-require "setups/dap"
+require 'setups/dap'
 
 -- `norcalli/nvim-colorizer.lua`
-require "setups/colorizer"
+require 'setups/colorizer'
 
 -- `terrortylor/nvim-comment`
-require "setups/comments"
+require 'setups/comments'
 
 -- `neovim/nvim-lspconfig`
-require "setups/lsp"
+require 'setups/lsp'
 
 -- `lewis6991/gitsigns.nvim`
-require "setups/git"
+require 'setups/git'
 
 -- `lukas-reineke/indent-blankline.nvim`
-require "setups/indent"
+require 'setups/indent'
 
 -- `nvim-treesitter/nvim-treesitter`
-require "setups/treesitter"
+require 'setups/treesitter'
 
 -- `kyazdani42/nvim-tree.lua`
-require "setups/tree"
+require 'setups/tree'
 
 -- `akinsho/bufferline.nvim`
 -- require "setups/bufferline"
 
 -- `ur4ltz/surround.nvim`
-require "setups/surround"
+require 'setups/surround'
 
 -- `jbyuki/venn.nvim`
-require "setups/venn"
+require 'setups/venn'
 
 -- `hoob3rt/lualine.nvim`
-require "setups/statusline"
+require 'setups/statusline'
 
 -- `hrsh7th/nvim-cmp`
 -- `hrsh7th/cmp-nvim-lsp`
 -- `saadparwaiz1/cmp_luasnip`
-require "setups/cmp"
+require 'setups/cmp'
 
 -- `ojroques/nvim-bufdel`
-require "setups/bufdel"
+require 'setups/bufdel'

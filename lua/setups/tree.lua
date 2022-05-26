@@ -1,6 +1,4 @@
-local nvim_tree = require "nvim-tree"
-
-nvim_tree.setup {
+require('nvim-tree').setup {
   disable_netrw = true,
   -- hijack netrw window on startup
   hijack_netrw = true,
@@ -39,7 +37,7 @@ nvim_tree.setup {
     -- height of the window, can be either a number (columns) or a string in `%`, for top or bottom side placement
     height = 30,
     -- side of the tree, can be one of 'left' | 'right' | 'top' | 'bottom'
-    side = "left",
+    side = 'left',
     mappings = {
       -- custom only false will merge the list with the default mappings
       -- if true, it will only use your list to set the mappings

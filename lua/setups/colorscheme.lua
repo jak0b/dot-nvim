@@ -1,4 +1,4 @@
-local ayu = require "ayu"
+local ayu = require 'ayu'
 
 ayu.setup {
   dark = true,
