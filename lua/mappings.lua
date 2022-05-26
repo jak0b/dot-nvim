@@ -7,7 +7,7 @@ g.mapleader = ';'
 -- map('n', '<leader><space>', ':set hlsearch!<cr>', map_args)
 -- set("n", "<leader>cd", ":cd %:p:h<cr>")
 
-set('n', '<leader>q', ':quitall<cr>')
+set('n', '<leader>q', ':q<CR>')
 
 -- Telescope
 
