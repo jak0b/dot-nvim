@@ -1,6 +1,4 @@
-local lualine = require 'lualine'
-
-local function mode()
+local function vim_mode()
   -- source https://github.com/nvim-lualine/lualine.nvim/blob/c12b1673107c181e32ce54f2dc4c76a2a884d7ba/lua/lualine/utils/mode.lua
   local map = {
     ['n'] = 'N',
@@ -16,7 +14,7 @@ local function mode()
     ['vs'] = 'V',
     ['V'] = 'L',
     ['Vs'] = 'L',
-    ['\22'] = 'VB',
+    ['\22'] = 'V',
     ['\22s'] = 'VB',
     ['s'] = 'S',
     ['S'] = 'SL',
@@ -48,23 +46,23 @@ local function mode()
   end
 end
 
-lualine.setup {
+require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'ayu',
-    section_separators = { left = '', right = '' },
-    component_separators = { left = '', right = '' },
+    theme = 'auto',
+    section_separators = { left = '', right = '' },
+    component_separators = { left = '║', right = '║' },
     disabled_filetypes = {},
     always_divide_middle = false,
     globalstatus = true,
   },
   sections = {
-    lualine_a = { mode, 'location' },
+    lualine_a = { vim_mode, 'location' },
     lualine_b = { 'branch', 'diff' },
     lualine_c = { 'filename' },
     lualine_x = {},
     lualine_y = { 'diagnostics' },
-    lualine_z = { 'encoding', 'fileformat', 'filetype' },
+    lualine_z = { 'encoding', 'filetype' },
   },
   inactive_sections = {
     lualine_a = {},

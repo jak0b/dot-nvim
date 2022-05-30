@@ -1,11 +1,8 @@
-local telescope = require 'telescope'
-local actions = require 'telescope.actions'
-
-telescope.setup {
+require('telescope').setup {
   defaults = {
     mappings = {
       i = {
-        ['<esc>'] = actions.close,
+        ['<esc>'] = require('telescope.actions').close,
       },
     },
     prompt_title = '',
@@ -21,4 +18,4 @@ telescope.setup {
   },
 }
 
-telescope.load_extension 'dap'
+require('telescope').load_extension 'dap'

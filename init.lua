@@ -1,8 +1,7 @@
 -- vim: acd
-require 'packers'
 
-require 'base'
+local pkgs = { 'packers', 'base', 'setups', 'mappings' }
 
-require 'setups'
-
-require 'mappings'
+for _, pkg in ipairs(pkgs) do
+  require(pkg)
+end

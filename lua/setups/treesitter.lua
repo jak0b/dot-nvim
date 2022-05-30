@@ -1,6 +1,4 @@
-local treesitter_configs = require 'nvim-treesitter.configs'
-
-treesitter_configs.setup {
+require('nvim-treesitter.configs').setup {
   ensure_installed = 'all',
   ignore_install = { 'javascript' }, -- List of parsers to ignore installing
   highlight = {

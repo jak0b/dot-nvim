@@ -1,16 +1,13 @@
-local cmd = vim.cmd
-local packer = require 'packer'
-
-cmd [[
+vim.cmd [[
 augroup Packer
   autocmd!
   autocmd BufWritePost init.lua PackerCompile
 augroup end
 ]]
 
-cmd [[packadd packer.nvim]]
+vim.cmd [[packadd packer.nvim]]
 
-packer.startup(function(use)
+require('packer').startup(function(use)
   -- Auto RBGA colorizer
   use { 'norcalli/nvim-colorizer.lua' }
 
@@ -69,8 +66,7 @@ packer.startup(function(use)
 
   use 'taybart/b64.nvim'
 
-  -- Ayu theme
-  use 'Shatur/neovim-ayu'
+  use 'EdenEast/nightfox.nvim'
 
   use {
     'lewis6991/gitsigns.nvim',
@@ -80,4 +76,5 @@ packer.startup(function(use)
   }
 
   use 'terrortylor/nvim-comment'
+
 end)

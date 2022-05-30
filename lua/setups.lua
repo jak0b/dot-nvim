@@ -31,7 +31,7 @@ require 'setups/treesitter'
 require 'setups/tree'
 
 -- `akinsho/bufferline.nvim`
--- require "setups/bufferline"
+require "setups/bufferline"
 
 -- `ur4ltz/surround.nvim`
 require 'setups/surround'

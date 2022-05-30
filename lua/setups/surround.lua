@@ -1,5 +1,3 @@
-local surround = require 'surround'
-
-surround.setup {
+require('surround').setup {
   mappings_style = 'surround',
 }
