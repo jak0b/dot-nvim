@@ -21,7 +21,7 @@ require('packer').startup(function(use)
   use { 'nvim-telescope/telescope-dap.nvim' }
 
   -- Neovim tree sitter
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use { 'nvim-treesitter/nvim-treesitter' }
 
   use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
 
