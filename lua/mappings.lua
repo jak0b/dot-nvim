@@ -54,6 +54,14 @@ set('n', '<leader>dlp', ':lua require\'dap\'.set_breakpoint(nil, nil, vim.fn.inp
 set('n', '<leader>dr', ':lua require\'dap\'.repl.toggle()<cr>')
 set('n', '<leader>da', ':Telescope dap configurations<cr>')
 
+set('n', '<leader>C', ':ColorizerToggle<cr>')
+
+set('n', '<leader>li', ':LspInfo<cr>')
+set('n', '<leader>ll', ':LspLog<cr>')
+set('n', '<leader>lr', ':LspRestart<cr>')
+set('n', '<leader>ls', ':LspStart<cr>')
+set('n', '<leader>lp', ':LspStop<cr>')
+
 set('n', '<leader>dl', ':lua require\'dap\'.run_last()<cr>')
 set('n', '<leader>du', ':lua require\'dapui\'.toggle()<cr>') -- toggle DAP nvim UI
 
