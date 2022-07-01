@@ -7,7 +7,7 @@ require 'setups/colorscheme'
 -- `mfussenegger/nvim-dap-python`
 -- `theHamsta/nvim-dap-virtual-text`
 -- `rcarriga/nvim-dap-ui`
-require 'setups/dap'
+-- require 'setups/dap'
 
 -- `norcalli/nvim-colorizer.lua`
 require 'setups/colorizer'
@@ -31,7 +31,7 @@ require 'setups/treesitter'
 require 'setups/tree'
 
 -- `akinsho/bufferline.nvim`
-require "setups/bufferline"
+-- require "setups/bufferline"
 
 -- `ur4ltz/surround.nvim`
 require 'setups/surround'
