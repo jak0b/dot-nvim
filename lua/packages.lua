@@ -21,23 +21,9 @@ opt.rtp:prepend(lazypath)
 -- set the leader key
 vim.g.mapleader = ';'
 
-local treeConfig = {
-  sort_by = "case_sensitive",
-  view = {
-    width = 30,
-  },
-  renderer = {
-    group_empty = true,
-  },
-  filters = {
-    dotfiles = true,
-  },
-}
-
 require("lazy").setup({
   {
     "nvim-tree/nvim-tree.lua",
-    config = treeConfig,
     dependencies = {
       "nvim-tree/nvim-web-devicons"
     }

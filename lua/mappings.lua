@@ -2,7 +2,12 @@ local g = vim.g
 local cmd = vim.cmd
 local set = vim.keymap.set
 
-g.mapleader = ';'
+
+local function setMapLeader() 
+  vim.g.mapleader = ';'
+end
+
+setMapLeader()
 
 -- map('n', '<leader><space>', ':set hlsearch!<cr>', map_args)
 -- set("n", "<leader>cd", ":cd %:p:h<cr>")
@@ -44,15 +49,15 @@ set('', '<leader>r', ':NvimTreeRefresh<cr>')
 set('', '<leader>c', ':NvimTreeFindFile<cr>')
 
 -- dap
-set('n', '<leader>dc', ':lua require\'dap\'.continue()<cr>')
-set('n', '<leader>do', ':lua require\'dap\'.step_over()<cr>')
-set('n', '<leader>di', ':lua require\'dap\'.step_into()<cr>')
-set('n', '<leader>do', ':lua require\'dap\'.step_out()<cr>')
-set('n', '<leader>db', ':lua require\'dap\'.toggle_breakpoint()<cr>')
-set('n', '<leader>dB', ':lua require\'dap\'.set_breakpoint(vim.fn.input(\'Breakpoint condition: \'))<cr>')
-set('n', '<leader>dlp', ':lua require\'dap\'.set_breakpoint(nil, nil, vim.fn.input(\'Log point message: \'))<cr>')
-set('n', '<leader>dr', ':lua require\'dap\'.repl.toggle()<cr>')
-set('n', '<leader>da', ':Telescope dap configurations<cr>')
+-- set('n', '<leader>dc', ':lua require\'dap\'.continue()<cr>')
+-- set('n', '<leader>do', ':lua require\'dap\'.step_over()<cr>')
+-- set('n', '<leader>di', ':lua require\'dap\'.step_into()<cr>')
+-- set('n', '<leader>do', ':lua require\'dap\'.step_out()<cr>')
+-- set('n', '<leader>db', ':lua require\'dap\'.toggle_breakpoint()<cr>')
+-- set('n', '<leader>dB', ':lua require\'dap\'.set_breakpoint(vim.fn.input(\'Breakpoint condition: \'))<cr>')
+-- set('n', '<leader>dlp', ':lua require\'dap\'.set_breakpoint(nil, nil, vim.fn.input(\'Log point message: \'))<cr>')
+-- set('n', '<leader>dr', ':lua require\'dap\'.repl.toggle()<cr>')
+-- set('n', '<leader>da', ':Telescope dap configurations<cr>')
 
 set('n', '<leader>C', ':ColorizerToggle<cr>')
 
