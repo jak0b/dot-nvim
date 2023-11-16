@@ -1,7 +1,7 @@
 -- `nvim-telescope/telescope.nvim`
 require 'setups/telescope'
 
-require 'setups/colorscheme'
+-- require 'setups/colorscheme'
 
 -- `mfussenegger/nvim-dap`
 -- `mfussenegger/nvim-dap-python`
@@ -22,7 +22,7 @@ require 'setups/lsp'
 require 'setups/git'
 
 -- `lukas-reineke/indent-blankline.nvim`
-require 'setups/indent'
+-- require 'setups/indent'
 
 -- `nvim-treesitter/nvim-treesitter`
 require 'setups/treesitter'
@@ -36,6 +36,8 @@ require 'setups/tree'
 -- `ur4ltz/surround.nvim`
 require 'setups/surround'
 
+require 'setups/mason'
+
 -- `jbyuki/venn.nvim`
 require 'setups/venn'
 
@@ -48,4 +50,4 @@ require 'setups/statusline'
 require 'setups/cmp'
 
 -- `ojroques/nvim-bufdel`
-require 'setups/bufdel'
+-- require 'setups/bufdel'
