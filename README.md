@@ -1,6 +1,6 @@
 ### My personal NeoVIM dotfiles
 
-This configuration requires at least NeoVIM >= 0.8.1.
+This configuration requires at least NeoVIM >= 0.9.4.
 
 The following laugage servers must be installed for LPS:
  - rust: `rust-analyzer`
