@@ -105,6 +105,3 @@ autocmd FileType rust nnoremap <buffer><leader>ac :wall<cr> :!cargo clean<cr>
 autocmd FileType rust nnoremap <buffer><leader>aC :wall<cr> :!cargo test --release<cr>
 ]]
 
--- base64
-set('v', '<leader>be :<c-u>', ':lua require("b64").encode()<cr>', { noremap = true })
-set('v', '<leader>bd :<c-u>', ':lua require("b64").decode()<cr>', { noremap = true })
