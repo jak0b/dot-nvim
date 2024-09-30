@@ -1,8 +1,8 @@
-### My personal NeoVIM dotfiles
+### My personal NeoVim dotfiles
 
-This configuration requires at least NeoVIM >= 0.9.4.
+This configuration requires at least NeoVim >= v0.10.1
 
-The following laugage servers must be installed for LPS:
+The following language servers must be installed for LPS:
  - rust: `rust-analyzer`
  - python: `pyright-langserver`
  - golang: `gopls`
