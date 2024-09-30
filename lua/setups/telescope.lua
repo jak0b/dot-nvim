@@ -3,7 +3,9 @@ require('telescope').setup {
     mappings = {
       i = {
         ['<esc>'] = require('telescope.actions').close,
+        ['<c-d>'] = require('telescope.actions').delete_buffer
       },
+      n = { ['<c-d>'] = require('telescope.actions').delete_buffer }
     },
     prompt_title = '',
     results_title = '',
