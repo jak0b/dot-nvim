@@ -5,14 +5,16 @@ require('lualine').setup {
     disabled_filetypes = {},
     always_divide_middle = false,
     globalstatus = true,
+    section_separators = '',
+    component_separators = ''
   },
   sections = {
-    lualine_a = { 'mode', 'location' },
-    lualine_b = { 'branch', 'diff' },
-    lualine_c = { { 'filename', file_status = true, path = 1 } },
-    lualine_x = {},
-    lualine_y = { 'diagnostics' },
-    lualine_z = { 'encoding', 'filetype' },
+    lualine_a = { { 'mode', fmt = function(str) return str:sub(1,1) end }},
+    lualine_b = { 'location', 'branch', 'diff' },
+    lualine_c = { { 'filename', file_status = true, path = 3 } },
+    lualine_x = { "%S", 'diagnostics' },
+    lualine_y = { 'filesize' },
+    lualine_z = { 'filetype' },
   },
   inactive_sections = {
     lualine_a = {},
