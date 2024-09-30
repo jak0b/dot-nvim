@@ -28,6 +28,9 @@ require("lazy").setup({
       "nvim-tree/nvim-web-devicons"
     }
   },
+  {
+    "projekt0n/github-nvim-theme"
+  },
 
   "NvChad/nvim-colorizer.lua",
   "kylechui/nvim-surround",

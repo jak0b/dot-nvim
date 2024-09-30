@@ -1,7 +1,4 @@
 local opt = vim.opt
-
-opt.number = true -- show normal number line
-opt.relativenumber = true -- show relative line number
 opt.showmatch = true -- highlight matching parenthesis
 
 opt.foldmethod = 'marker' -- enable folding (default 'foldmarker')
@@ -10,6 +7,8 @@ opt.foldmethod = 'marker' -- enable folding (default 'foldmarker')
 opt.formatoptions = "jcroqlt"
 opt.textwidth = 100
 opt.wrapmargin = 0
+opt.cmdheight = 0
+opt.showcmdloc = "statusline"
 
 opt.splitright = true -- vertical split to the right
 opt.splitbelow = true -- horizontal split to the bottom
@@ -56,7 +55,7 @@ opt.smartindent = true -- autoindent new lines
 opt.background = 'dark'
 opt.termguicolors = true
 
-vim.cmd.colorscheme "ayu-dark"
+vim.cmd.colorscheme "github_dark_high_contrast"
 
 -- don't auto commenting new lines
 vim.cmd [[au BufEnter * set fo-=c fo-=r fo-=o]]
