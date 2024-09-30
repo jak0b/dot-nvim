@@ -49,5 +49,4 @@ require 'setups/statusline'
 -- `saadparwaiz1/cmp_luasnip`
 require 'setups/cmp'
 
--- `ojroques/nvim-bufdel`
--- require 'setups/bufdel'
+require 'setups/autopair'
