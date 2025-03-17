@@ -55,7 +55,12 @@ opt.smartindent = true -- autoindent new lines
 opt.background = 'dark'
 opt.termguicolors = true
 
-vim.cmd.colorscheme "github_dark_tritanopia"
+require('github-theme').setup({ options = {
+  transparent = true,
+  terminal_colors = true,
+}})
+
+vim.cmd.colorscheme "github_dark_high_contrast"
 
 -- don't auto commenting new lines
 vim.cmd [[au BufEnter * set fo-=c fo-=r fo-=o]]
