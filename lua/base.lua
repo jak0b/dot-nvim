@@ -1,13 +1,15 @@
 local opt = vim.opt
 opt.showmatch = true -- highlight matching parenthesis
 
+vim.wo.number = true
+vim.wo.relativenumber = true
+
 opt.foldmethod = 'marker' -- enable folding (default 'foldmarker')
--- vim.opt.colorcolumn = '110'        -- line length marker at 120 columns
---
+vim.opt.colorcolumn = '120' -- line length marker at 120 columns
+
 opt.formatoptions = "jcroqlt"
 opt.textwidth = 100
 opt.wrapmargin = 0
-opt.cmdheight = 0
 opt.showcmdloc = "statusline"
 
 opt.splitright = true -- vertical split to the right
