@@ -18,9 +18,6 @@ end
 
 opt.rtp:prepend(lazypath)
 
--- set the leader key
-vim.g.mapleader = ';'
-
 require("lazy").setup({
   {
     "nvim-tree/nvim-tree.lua",
