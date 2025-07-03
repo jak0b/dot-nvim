@@ -1,69 +1,30 @@
-local opt = vim.opt
-local cmd = vim.cmd
-local fn = vim.fn
-local g = vim.g
-local set = vim.keymap.set
-
-local lazypath = fn.stdpath("data") .. "/lazy/lazy.nvim"
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-  fn.system({
+  vim.fn.system({
     "git",
     "clone",
     "--filter=blob:none",
     "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
+    "--branch=stable",
     lazypath,
   })
 end
 
-opt.rtp:prepend(lazypath)
+vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  {
-    "nvim-tree/nvim-tree.lua",
-    dependencies = {
-      "nvim-tree/nvim-web-devicons"
-    }
-  },
-  {
-    "projekt0n/github-nvim-theme"
-  },
-
+  { "nvim-tree/nvim-tree.lua", dependencies = { "nvim-tree/nvim-web-devicons" }},
+  "projekt0n/github-nvim-theme",
   "NvChad/nvim-colorizer.lua",
   "kylechui/nvim-surround",
-
-  { 'RaafatTurki/hex.nvim' },
-
-  { "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
-  {
-    "akinsho/bufferline.nvim",
-    version = "v3.*"
-  },
-
+  {"nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" }},
+  "akinsho/bufferline.nvim",
   "nvim-treesitter/nvim-treesitter",
   "neovim/nvim-lspconfig",
   "williamboman/mason.nvim",
   "windwp/nvim-autopairs",
-
-  {
-    "hrsh7th/nvim-cmp",
-    dependencies = {
-      "hrsh7th/cmp-nvim-lsp",
-      "hrsh7th/cmp-path",
-      "hrsh7th/cmp-nvim-lua",
-      "L3MON4D3/LuaSnip"
-    },
-  },
-
-  -- "lukas-reineke/indent-blankline.nvim",
+  {"hrsh7th/nvim-cmp", dependencies = { "hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-path", "hrsh7th/cmp-nvim-lua", "L3MON4D3/LuaSnip" }},
   "nvim-lualine/lualine.nvim",
-
-  "Shatur/neovim-ayu",
-
   { "lewis6991/gitsigns.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
-
   "terrortylor/nvim-comment",
-
-  { "cbochs/portal.nvim",      dependencies = { "cbochs/grapple.nvim", "ThePrimeagen/harpoon" } },
-  "jbyuki/venn.nvim"
 })
