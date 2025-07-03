@@ -2,7 +2,7 @@ local g = vim.g
 local cmd = vim.cmd
 
 local function setMapLeader() 
-  vim.g.mapleader = vim.api.nvim_replace_termcodes('<BS>', false, false, true)
+  vim.g.mapleader = vim.api.nvim_replace_termcodes(' ', false, false, true)
 end
 
 local function keymap(mode, lhs, rhs, opts)
