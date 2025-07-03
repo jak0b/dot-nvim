@@ -35,10 +35,9 @@ keymap('v', 'L', '$')
 keymap('v', '<C-a>', '^')
 keymap('v', '<C-e>', '$')
 
-keymap('n', '<leader><space>', ':Telescope buffers<cr>')
+keymap('n', '<leader>b', ':Telescope buffers<cr>')
 keymap('n', '<leader>f', ':Telescope find_files<cr>')
 keymap('n', '<leader>g', ':Telescope live_grep<cr>')
--- Look for a word that on which the cursor is current 
 keymap('n', '<leader>G', ':Telescope grep_string<cr>')
 
 keymap('n', '<leader>tt',  ':Telescope<cr>')
@@ -78,6 +77,4 @@ keymap('n', '<leader>lp', ':LspStop<cr>')
 keymap('n', '<leader>dl', ':lua require\'dap\'.run_last()<cr>')
 keymap('n', '<leader>du', ':lua require\'dapui\'.toggle()<cr>')
 
-
--- Terminal exti
 keymap('t', '<Esc>', '<C-\\><C-n>')
