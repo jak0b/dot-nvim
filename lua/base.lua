@@ -1,5 +1,3 @@
-local colorscheme = "light"
-
 local opt = vim.opt
 opt.showmatch = true -- highlight matching parenthesis
 
@@ -64,16 +62,17 @@ require('github-theme').setup({ options = {
   terminal_colors = true,
 }})
 
-function apply_colorscheme(schema)
-  if schema == "dark" then
+function apply_colorscheme()
+  local colorscheme = require "colorscheme"
+  if colorscheme == "dark" then
     vim.cmd.colorscheme "github_dark_high_contrast"
   end
-  if schema == "light" then
+  if colorscheme == "light" then
     vim.cmd.colorscheme "github_light_high_contrast"
   end
 end
 
-apply_colorscheme(colorscheme)
+apply_colorscheme()
 
 -- don't auto commenting new lines
 vim.cmd [[au BufEnter * set fo-=c fo-=r fo-=o]]
