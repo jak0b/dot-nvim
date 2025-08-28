@@ -63,13 +63,10 @@ require('github-theme').setup({ options = {
 }})
 
 function apply_colorscheme()
-  local colorscheme = require "colorscheme"
-  if colorscheme == "dark" then
-    vim.cmd.colorscheme "github_dark_high_contrast"
-  end
-  if colorscheme == "light" then
-    vim.cmd.colorscheme "github_light_high_contrast"
-  end
+ vim.cmd.colorscheme(
+   string.format("github_%s_high_contrast",
+   require("colorscheme")
+ )) 
 end
 
 apply_colorscheme()
