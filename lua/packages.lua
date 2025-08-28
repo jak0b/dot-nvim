@@ -25,6 +25,6 @@ require("lazy").setup({
   "windwp/nvim-autopairs",
   {"hrsh7th/nvim-cmp", dependencies = { "hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-path", "hrsh7th/cmp-nvim-lua", "L3MON4D3/LuaSnip" }},
   "nvim-lualine/lualine.nvim",
-  { "lewis6991/gitsigns.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
+  { "lewis6991/gitsigns.nvim", dependencies = { "nvim-lua/plenary.nvim" }},
   "terrortylor/nvim-comment",
 })
