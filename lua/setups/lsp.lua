@@ -8,6 +8,7 @@ local servers = {
   clangd = {},
   tinymist = {},
   eslint = {},
+  zls = {},
 }
 
 require("mason").setup()
