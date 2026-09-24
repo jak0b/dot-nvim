@@ -23,7 +23,7 @@ require("lazy").setup({
   "neovim/nvim-lspconfig",
   {"mason-org/mason-lspconfig.nvim", dependencies = {"mason-org/mason.nvim", "neovim/nvim-lspconfig"}},
   "windwp/nvim-autopairs",
-  {"hrsh7th/nvim-cmp", dependencies = { "hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-path", "hrsh7th/cmp-nvim-lua", "L3MON4D3/LuaSnip" }},
+  {"hrsh7th/nvim-cmp", dependencies = { "hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-path", "hrsh7th/cmp-nvim-lua" }},
   "nvim-lualine/lualine.nvim",
   { "lewis6991/gitsigns.nvim", dependencies = { "nvim-lua/plenary.nvim" }},
   "terrortylor/nvim-comment",
